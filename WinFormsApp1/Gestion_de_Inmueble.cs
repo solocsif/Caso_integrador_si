@@ -12,6 +12,7 @@ namespace WinFormsApp1
 {
     public partial class Gestion_de_Inmueble : Form
     {
+        Inmuebles Enviar = new Inmuebles();
         public Gestion_de_Inmueble()
         {
             InitializeComponent();
@@ -33,6 +34,30 @@ namespace WinFormsApp1
             Inicio index = new Inicio();
             index.Show();
 
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Aceptar_Click(object sender, EventArgs e)
+        {
+            Enviar.pTipo= Desplegable.Text;
+            Enviar.pMatricula=Matricula.Text;
+            Enviar.pDireccion=Direccion.Text;
+            Enviar.pTelefono=Telefono.Text;
+            Enviar.pBarrio=Barrio.Text;
+            Enviar.pZona=Zona.Text;
+            Enviar.pPrecio=Precio.Text;
+            Enviar.pDescripcion=Descripcion.Text;
+            Enviar.Show();
 
         }
     }

@@ -28,12 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Inmuebles";
+            dataGridView1 = new DataGridView();
+            Cargar = new Button();
+            CTipo = new DataGridViewTextBoxColumn();
+            CMatricula = new DataGridViewTextBoxColumn();
+            CDireccion = new DataGridViewTextBoxColumn();
+            CTelefono = new DataGridViewTextBoxColumn();
+            CBarrio = new DataGridViewTextBoxColumn();
+            CZona = new DataGridViewTextBoxColumn();
+            CPrecio = new DataGridViewTextBoxColumn();
+            CDescripcion = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CTipo, CMatricula, CDireccion, CTelefono, CBarrio, CZona, CPrecio, CDescripcion });
+            dataGridView1.Location = new Point(28, 26);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(853, 178);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Cargar
+            // 
+            Cargar.Location = new Point(200, 235);
+            Cargar.Name = "Cargar";
+            Cargar.Size = new Size(325, 52);
+            Cargar.TabIndex = 1;
+            Cargar.Text = "Cargar";
+            Cargar.UseVisualStyleBackColor = true;
+            Cargar.Click += button1_Click;
+            // 
+            // CTipo
+            // 
+            CTipo.HeaderText = "Tipo de inmueble";
+            CTipo.Name = "CTipo";
+            // 
+            // CMatricula
+            // 
+            CMatricula.HeaderText = "Matricula";
+            CMatricula.Name = "CMatricula";
+            // 
+            // CDireccion
+            // 
+            CDireccion.HeaderText = "Direccion";
+            CDireccion.Name = "CDireccion";
+            // 
+            // CTelefono
+            // 
+            CTelefono.HeaderText = "Telefono";
+            CTelefono.Name = "CTelefono";
+            // 
+            // CBarrio
+            // 
+            CBarrio.HeaderText = "Barrio";
+            CBarrio.Name = "CBarrio";
+            // 
+            // CZona
+            // 
+            CZona.HeaderText = "Zona";
+            CZona.Name = "CZona";
+            // 
+            // CPrecio
+            // 
+            CPrecio.HeaderText = "Precio";
+            CPrecio.Name = "CPrecio";
+            // 
+            // CDescripcion
+            // 
+            CDescripcion.HeaderText = "Descripcion";
+            CDescripcion.Name = "CDescripcion";
+            // 
+            // Inmuebles
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(893, 311);
+            Controls.Add(Cargar);
+            Controls.Add(dataGridView1);
+            Name = "Inmuebles";
+            Text = "Inmuebles";
+            Load += Inmuebles_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private Button Cargar;
+        private DataGridViewTextBoxColumn CTipo;
+        private DataGridViewTextBoxColumn CMatricula;
+        private DataGridViewTextBoxColumn CDireccion;
+        private DataGridViewTextBoxColumn CTelefono;
+        private DataGridViewTextBoxColumn CBarrio;
+        private DataGridViewTextBoxColumn CZona;
+        private DataGridViewTextBoxColumn CPrecio;
+        private DataGridViewTextBoxColumn CDescripcion;
     }
 }
